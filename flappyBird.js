@@ -24,3 +24,25 @@ const score = new Audio();
 
 fly.src = '/sounds/fly.mp3'
 score.src = '/sounds/score.mp3'
+
+// Draw Images format
+// ctx.drawImage(imageName, X, Y, Width, Height);
+
+draw = () => {
+  // Background - center in canvas
+  ctx.drawImage(bg, 0, 0);
+  // Pipes - pipeSouth, constant added as pipe hight + gap
+  ctx.drawImage(pipeNorth, pX, pY);
+  ctx.drawImage(pipeSouth, pX, pY + Const);
+
+  // Foreground - comes up from bottom, taking up canvas height - fg height
+  ctx.drawImage(fg, 0, cvs.height - fg.height);
+
+  // Bird
+  ctx.drawImage(bird, bX, bY);
+
+
+}
+
+// Invoke draw
+draw();
