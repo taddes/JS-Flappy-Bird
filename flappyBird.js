@@ -17,3 +17,10 @@ fg.src = 'images/fg.png';
 pipeNorth.src = 'images/pipeNorth.png';
 pipeSouth.src = 'images/pipeSouth.png';
 
+// Audio for game
+
+const fly = new Audio();
+const score = new Audio();
+
+fly.src = '/sounds/fly.mp3'
+score.src = '/sounds/score.mp3'
